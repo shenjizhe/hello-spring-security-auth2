@@ -78,7 +78,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.thirdlucky.hello.spring.security.oauth2.server.OAuth2ServerApplication</mainClass>
+                    <mainClass>com.thirdlucky.spring.security.oauth2.server.OAuth2ServerApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

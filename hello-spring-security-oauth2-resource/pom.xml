@@ -82,7 +82,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass></mainClass>
+                    <mainClass>com.thirdlucky.spring.security.oauth2.resource.OAuth2ResourceApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
