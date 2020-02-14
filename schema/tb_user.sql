@@ -1,0 +1,1 @@
+INSERT INTO `tb_user`(`id`, `username`, `password`, `phone`, `email`, `created`, `updated`) VALUES (37, 'admin', '$2a$10$9ZhDOBp.sRKat4l14ygu/.LscxrMUcDAfeVOEPiYwbcRkoB09gCmi', '15888888888', 'lee.lusifer@gmail.com', '2019-04-04 23:21:27', '2019-04-04 23:21:29');

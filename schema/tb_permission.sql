@@ -1,0 +1,6 @@
+INSERT INTO `tb_permission`(`id`, `parent_id`, `name`, `enname`, `url`, `description`, `created`, `updated`) VALUES (37, 0, '系统管理', 'System', '/', NULL, '2019-04-04 23:22:54', '2019-04-04 23:22:56');
+INSERT INTO `tb_permission`(`id`, `parent_id`, `name`, `enname`, `url`, `description`, `created`, `updated`) VALUES (38, 37, '用户管理', 'SystemUser', '/users/', NULL, '2019-04-04 23:25:31', '2019-04-04 23:25:33');
+INSERT INTO `tb_permission`(`id`, `parent_id`, `name`, `enname`, `url`, `description`, `created`, `updated`) VALUES (39, 38, '查看用户', 'SystemUserView', '/users/view/', NULL, '2019-04-04 15:30:30', '2019-04-04 15:30:43');
+INSERT INTO `tb_permission`(`id`, `parent_id`, `name`, `enname`, `url`, `description`, `created`, `updated`) VALUES (40, 38, '新增用户', 'SystemUserInsert', 'users/insert/', NULL, '2019-04-04 15:30:31', '2019-04-04 15:30:44');
+INSERT INTO `tb_permission`(`id`, `parent_id`, `name`, `enname`, `url`, `description`, `created`, `updated`) VALUES (41, 38, '编辑用户', 'SystemUserUpdate', 'users/update/', NULL, '2019-04-04 15:30:32', '2019-04-04 15:30:45');
+INSERT INTO `tb_permission`(`id`, `parent_id`, `name`, `enname`, `url`, `description`, `created`, `updated`) VALUES (42, 38, '删除用户', 'SystemUserDelete', 'users/delete/', NULL, '2019-04-04 15:30:48', '2019-04-04 15:30:45');
