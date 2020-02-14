@@ -29,25 +29,11 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
-    @Value("${spring.}")
-
     @Bean
     @Primary
     @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource dataSource() {
         return DataSourceBuilder.create().build();
-    }
-
-    @Bean
-    public TokenStore tokenStore() {
-        // push token to db
-        return new JdbcTokenStore(dataSource());
-    }
-
-    @Bean
-    public ClientDetailsService jdbcClientDetailsService() {
-        // get config from db
-        return new JdbcClientDetailsService(dataSource());
     }
 
     @Override
@@ -61,7 +47,23 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
     }
 
     /**
-     * 只用于内存创建方法
+     * 2.用数据库鉴权
+     * @return
+     */
+    @Bean
+    public TokenStore tokenStore() {
+        // push token to db
+        return new JdbcTokenStore(dataSource());
+    }
+
+    @Bean
+    public ClientDetailsService jdbcClientDetailsService() {
+        // get config from db
+        return new JdbcClientDetailsService(dataSource());
+    }
+
+    /**
+     * 1.只用于内存创建方法
      */
     private void configInMemory(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()

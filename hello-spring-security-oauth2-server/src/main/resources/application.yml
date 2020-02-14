@@ -1,3 +1,6 @@
+server:
+  port: 9000
+
 spring:
   application:
     name: auth2-server
@@ -5,7 +8,6 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     jdbc-url: jdbc:mysql://192.168.227.135:3308/oauth2?useUnicode=true&characterEncoding=utf-8&useSSL=false
-#    url: jdbc:mysql://192.168.227.135:3308/oauth2?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: 123456
     hikari:
@@ -17,5 +19,6 @@ spring:
       max-lifetime: 1800000
       connection-timeout: 30000
       connection-test-query: SELECT 1
-server:
-  port: 9000
+mybatis:
+  type-aliases_package: com.example.hellospring.controller
+  mapper-locations: classpath:mapper/*.xml

@@ -47,7 +47,7 @@
         <dependencies>
             <dependency>
                 <groupId>com.thirdlucky</groupId>
-                <artifactId>hello-apache-dubbo-dependencies</artifactId>
+                <artifactId>hello-spring-security-oauth2-dependencies</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
